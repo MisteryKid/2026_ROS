@@ -1,0 +1,14 @@
+#!/usr/bin/bash
+set -e
+
+source /opt/ros/humble/setup.bash
+
+sleep 1
+
+colcon build --symlink-install --packages-select rclcpp
+
+sleep 1
+
+source install/setup.bash
+
+echo "Build and Sourcing Complete!"
